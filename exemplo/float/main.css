@@ -1,0 +1,41 @@
+div {
+  /*opacity: 0;*/
+  width: 150px;
+  height: 150px;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  line-height: 150px;
+}
+
+.primeira {
+  background-color: red;
+  float: left;
+}
+
+.segunda {
+  background-color: green;
+  float: left;
+}
+
+.terceira {
+  background-color: black;
+  float: left;
+  height: 400px;
+}
+
+p {
+
+  color: white;
+  clear: both;
+}
+
+section {
+  background-color: blue;
+  overflow: hidden;
+}
+
+footer {
+  background: magenta;
+  clear: both;
+}
