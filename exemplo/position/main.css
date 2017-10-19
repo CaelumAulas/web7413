@@ -1,0 +1,31 @@
+div {
+  width: 150px;
+  height: 150px;
+  color: white;
+  font-size: 30px;
+}
+
+.primeiro {
+  background-color: red;
+}
+
+.segundo {
+  background-color: black;
+}
+
+.terceiro {
+  background-color: green;
+}
+
+.quarto {
+  background-color: blue;
+  position: absolute;
+  left: 50%;
+}
+
+.interno {
+  background-color: magenta;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
