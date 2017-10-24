@@ -1,0 +1,23 @@
+
+.inputCor {
+    display: none;
+}
+
+label:after {
+    content: "";
+    display: block;
+    height: 45px;
+    width: 45px;
+}
+
+label[for=verde]:after {
+    background-color: #00FF00;
+}
+
+label[for=azul]:after {
+    background-color: #0000FF;
+}
+
+label[for=rosa]:after {
+    background-color: #ff0000;
+}
