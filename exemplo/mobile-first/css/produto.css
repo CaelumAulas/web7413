@@ -1,23 +1,98 @@
 
+
 .inputCor {
     display: none;
 }
+.cores {
+    position: relative;
+    padding-top: 3.125em;
+}
 
-label:after {
+.cores label:after {
     content: "";
-    display: block;
-    height: 45px;
-    width: 45px;
+    display: inline-block;
+    height: 2.8125em;
+    width: 2.8125em;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 1em;
 }
 
-label[for=verde]:after {
+
+.cores input:checked + label:after {
+    padding: 10px;
+    border: 5px solid black;
+}
+
+.cores input:not(:checked) + label img {
+    display: none;
+}
+
+.cores label[for=verde]:after {
     background-color: #00FF00;
+    left: 0;
 }
 
-label[for=azul]:after {
+.cores label[for=azul]:after {
     background-color: #0000FF;
+    left: 3.75em;
 }
 
-label[for=rosa]:after {
+.cores label[for=rosa]:after {
     background-color: #ff0000;
+    left: 7.5em;
+}
+
+.btnComprar {
+    font-size: 2em;
+}
+
+.produto {
+    font-size: 16px;
+}
+
+.produto h1 {
+    font-size: 2.5em;
+}
+
+.produto p {
+    font-size: 1.5em;
+}
+
+@media(min-width: 700px){
+    .produto {
+        font-size: 14px;
+    }
+}
+
+@media(min-width: 1000px){
+    .container {
+        width: 940px;
+        margin: 0 auto;
+    }
+}
+
+@media(min-width: 628px){
+
+    .produto {
+        padding-left: 35%;
+        position: relative;
+    }
+
+    .cores {
+        position: static;
+        padding: 0;
+    }
+
+    .cores img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+    }
+
+    .cores label:after {
+        position: static;
+    }
 }
