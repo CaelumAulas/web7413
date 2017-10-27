@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
     <link rel="stylesheet" href="css/produto.css">
     <title>Produto</title>
 </head>
@@ -17,7 +17,7 @@
 
             <form action="/carrinho" method="POST">
 
-                <input type="hidden" name="codigo" value="Fuzzy Cardigan" >
+                <input type="hidden" name="nome" value="Fuzzy Cardigan" >
                 <input type="hidden" name="preco" value="50" >
 
                 <fieldset class="cores">  
