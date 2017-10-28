@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/produto.css">
     <title>Produto</title>
 </head>
@@ -13,12 +13,14 @@
     <div class="container">       
         <div class="produto">
             <h1>Fuzzy Cardigan</h1>
-            <p>R$ 50,00</p>
+            <p>
+                R$ 50,00
+            </p>
 
             <form action="/carrinho" method="POST">
 
                 <input type="hidden" name="nome" value="Fuzzy Cardigan" >
-                <input type="hidden" name="preco" value="50" >
+                <input type="hidden" name="preco" value="50,00" >
 
                 <fieldset class="cores">  
                     
@@ -42,8 +44,10 @@
 
                 <fieldset class="tamanho">    
                     <legend>Escolha seu tamanho</legend>
-                    <input type="range" name="tamanho" value="42" min="38" max="60" step="2">
+                    <input type="range" id="tam" name="tamanho" value="42" min="38" max="60" step="2">
+                    <output for="tam"> 42 </output>
                 </fieldset>
+
 
                 <!-- tamanho -->
 
@@ -96,5 +100,8 @@
 
         <footer style="background:black;">Oi<br><br><br><br><br><br></footer>
     </div>
+
+    <script src="scripts/tamanho.js"></script>
+
 </body>
 </html>

@@ -26,7 +26,9 @@
                         <dd><?php print $_POST["nome"] ?></dd>
                         
                         <dt>Preço:</dt> 
-                        <dd><?php print $_POST["preco"] ?></dd>
+                        <dd id="preco">
+                            R$<?php print $_POST["preco"] ?>
+                        </dd>
                         
                         <dt>Cor</dt>
                         <dd>
@@ -38,6 +40,17 @@
                             <?php print $_POST["tamanho"] ?>
                         </dd>
                     </dl>
+
+                    <div class="form-group"> 
+                        <label for="qt">Quantidade</label>
+                        <input id="qt" type="number" class="form-control" value="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="total">Total</label>
+                        <output id="total" class="form-control">
+                        </output>
+                    </div>                
+
                 </div>
             </article>
         </div>
@@ -47,43 +60,58 @@
 
                 <div class="form-group">
                     <label for="nome">Nome</label>
-                    <input id="nome" type="text" class="form-control">
+                    <input id="nome" type="text" class="form-control" placeholder="Digite seu nome">
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input id="email" type="email" class="form-control">
+                    
+                    <div class="input-group">
+                        <span class="input-group-addon"> @ </span>
+                        <input id="email" type="email" class="form-control">            
+                    </div>
+
                 </div>
 
-                <label for="cpf">CPF</label>
-                <!-- Expressãop Regular -->
-                <input id="cpf" type="text" pattern="^\d\d\d\.\d\d\d\.\d\d\d-\d\d$">
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <!-- Expressãop Regular -->
+                    <input id="cpf" type="text" pattern="^\d\d\d\.\d\d\d\.\d\d\d-\d\d$" class="form-control">
+                </div>
             </fieldset>
             <fieldset class="col-sm-6">
                 <legend>Dados do Cartão</legend>
 
-                <label for="ncartao">Número do Cartão</label>
-                <input id="ncartao" type="text">
+                <div class="form-group">
+                    <label for="ncartao">Número do Cartão</label>
+                    <input id="ncartao" type="text" class="form-control">
+                </div>
 
-                Bandeira
-                <select type="text">
-                    <option value="">
-                        Master
-                    </option>
-                    <option value="">
-                        Visa
-                    </option>
-                    <option value="">
-                        Amex
-                    </option>
-                </select>
+                <div class="form-group">
+                    <label for="bandeira">Bandeira</label>
+                    <select id="bandeira" type="text" class="form-control">
+                        <option value="">
+                            Master
+                        </option>
+                        <option value="">
+                            Visa
+                        </option>
+                        <option value="">
+                            Amex
+                        </option>
+                    </select>
+                </div>
 
-                Validade
-                <input type="month">
+                <div class="form-group">
+                    <label for="validade">Validade</label>
+                    <input id="validade" type="month" class="form-control">
+                </div>
 
-
-                <button>Confirmar pedido</button>
+                <button class="btn btn-primary float-right">Confirmar pedido</button>
             </fieldset>
         </form>
     </div>
 </div>
+
+
+<script src="scripts/total.js"></script>
